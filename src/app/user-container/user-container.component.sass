@@ -1,0 +1,22 @@
+.container
+  border: 1px solid #6c8ebf
+  background: #dae8fc
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: 4rem max-content
+  gap: 1rem
+  grid-template-areas: "title title" "list detail" "list detail"
+
+p
+  grid-area: title
+  justify-self: center
+
+.list
+  grid-area: list
+  justify-self: stretch
+  margin: 1rem 0 1rem 1rem
+
+.detail
+  grid-area: detail
+  justify-self: stretch
+  margin: 1rem 1rem 1rem 0

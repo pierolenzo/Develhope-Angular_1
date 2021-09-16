@@ -1,0 +1,23 @@
+.container
+  background: #bac8d3
+  border: 1px solid #a7b7c4
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: auto
+  //gap: 1rem
+  grid-template-areas: "title title" "single detail"
+  margin: 1rem
+
+p
+  grid-area: title
+  justify-self: center
+
+.single
+  grid-area: single
+  justify-self: stretch
+  margin: 1rem 0 1rem 1rem
+
+.detail
+  grid-area: detail
+  justify-self: stretch
+  margin: 1rem 1rem 1rem 0
