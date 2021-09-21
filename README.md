@@ -1,3 +1,3 @@
-# Angular Exercise 4
+# Angular Exercise 6
 
-Partendo dall'esercizio precedente, creare un componente user-single, che verrà iterato nella lista e prenderà come `@Input()` un singolo elemento della lista
+Partendo dall'esercizio precedente, Aggiungere un controllo sulla lista utenti, se la lista è popolata mostrarla, altrimenti mostrare un messaggio "Non sono presenti utenti"

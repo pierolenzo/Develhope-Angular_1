@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="single">
+  <div class="single" *ngIf="users.length > 0; else noUsers" >
     <h4>User List</h4>
 
     <div *ngFor="let currentUser of users">
@@ -8,3 +8,7 @@
 
   </div>
 </div>
+
+<ng-template #noUsers>
+  <h4>Non sono presenti utenti</h4>
+</ng-template>
