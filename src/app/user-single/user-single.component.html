@@ -3,9 +3,10 @@
       <ul>
         <li>{{ item.id }}.</li>
         <li><img src="{{ item.profilePhotoUrl }}" alt="Foto profilo" /></li>
-        <li>{{ item.name }} {{ item.surname }}</li>
+        <li>{{ item.name }} {{ item?.surname }}</li>
         <li>{{ item.age }}</li>
         <li>{{ item.address.city }}</li>
+        <li><button (click)="removedItem(item.id)">Delete</button></li>
       </ul>
     </div>
 </div>

@@ -3,7 +3,7 @@
     <h4>User List</h4>
 
     <div *ngFor="let currentUser of users">
-      <app-user-single [item]="currentUser"></app-user-single>
+      <app-user-single [item]="currentUser" (removedItemEvent)="delete(users, $event)"></app-user-single>
     </div>
 
   </div>
