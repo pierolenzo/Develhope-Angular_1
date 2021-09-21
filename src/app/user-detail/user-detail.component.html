@@ -1,3 +1,55 @@
 <div class="container">
-  <p>user-detail.component</p>
+  <div class="user-detail__container">
+    <h4>User Details</h4>
+    <ul>
+      <li>ID: {{ user.id }}</li>
+      <li>Name: {{ user.name }}</li>
+      <li>Surname: {{ user.surname }}</li>
+      <li>Age: {{ user.age }}</li>
+      <li>Date of Birth: {{ user.dateOfBirth | date: "d MMM y" }}</li>
+      <li>Gender: {{ user.gender }}</li>
+    </ul>
+  </div>
+
+  <address class="address__container">
+    <h4>Address</h4>
+    <ul>
+      <li>City: {{ user.address.city }}</li>
+      <li>Street: {{ user.address.street }}</li>
+      <li>Postal Code: {{ user.address.postalCode }}</li>
+    </ul>
+  </address>
+
+  <div class="profile__container">
+    <h4>Profile</h4>
+    <ul>
+      <li>Role: {{ user.role }}</li>
+      <li>Username: {{ user.username }}</li>
+      <li>Profile Photo: <img src="{{ user.profilePhotoUrl }}" /></li>
+    </ul>
+  </div>
+
+  <div class="companies__container">
+    <h4>Companies</h4>
+
+    <div class="company" *ngFor="let item of user.companies">
+      <h5>Company Details</h5>
+
+        <ul>
+          <li>ID: {{ item.id }}</li>
+          <li>Name: {{ item.name }}</li>
+          <li>Description: {{ item.description }}</li>
+        </ul>
+
+        <address class="address__container">
+          <h5>Location</h5>
+          <ul>
+            <li>City: {{ item.location.city }}</li>
+            <li>Street: {{ item.location.street }}</li>
+            <li>Postal Code: {{ item.location.postalCode }}</li>
+          </ul>
+        </address>
+
+    </div>
+  </div>
 </div>
