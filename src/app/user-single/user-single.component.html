@@ -1,5 +1,11 @@
 <div class="content">
-    <div class="user-single__container">
+    <div class="user-single__container"
+    [ngClass]="{
+      'user-admin': item.role === 'admin',
+      'user-manager': item.role === 'manager',
+      'user-student': item.role === 'student',
+      'user-staff': item.role === 'staff'
+   }">
       <ul>
         <li>{{ item.id }}.</li>
         <li><img src="{{ item.profilePhotoUrl }}" alt="Foto profilo" /></li>
