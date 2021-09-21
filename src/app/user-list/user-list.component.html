@@ -1,16 +1,8 @@
 <div class="container">
   <div class="single">
-    <div class="user-list__container" *ngFor="let item of users">
-      <ul>
-        <li>{{ item.id }}.</li>
-        <li><img src="{{ item.profilePhotoUrl }}" alt="Foto profilo" /></li>
-        <li>{{ item.name }} {{ item.surname }}</li>
-        <li>{{ item.age }}</li>
-        <li>{{ item.address.city }}</li>
-      </ul>
+    <div *ngFor="let currentUser of users">
+      <app-user-single [item]="currentUser"></app-user-single>
     </div>
-    <!-- <app-user-single></app-user-single>
-    <app-user-single></app-user-single>
-    <app-user-single></app-user-single> -->
+
   </div>
 </div>
