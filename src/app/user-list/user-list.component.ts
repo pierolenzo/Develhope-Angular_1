@@ -54,7 +54,7 @@ export class UserListComponent implements OnInit {
         },
         role: Roles.admin,
         username: 'ElisMiao',
-        profilePhotoUrl: 'https://bit.ly/3zU6iH3',
+        profilePhotoUrl: 'https://bit.ly/3DWWxuj',
         gender: Gender.female
       }
   ];
